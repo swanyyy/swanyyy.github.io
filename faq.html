@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MWC - MimbleWimble Coin | Scalable cryptocurrency based on the Mimblewimble Protocol</title>
+
+    <meta name="description" content="Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.">
+    <meta name="keywords" content="Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.">
+    <meta name="author" content="MWC">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/mwc.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/mwc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/mwc.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/mwc.png">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/css/style.min.css">
+  </head>
+
+  <body>
+    <!--<div class="warning">
+      <div class="container" >
+        Important : MWC is hardforking block xxxx, make sure to update to your wallet to the v1.0.0
+      </div>
+    </div>-->
+    <main class="mw-page-wrapper position-relative">
+
+      <!-- Navbar -->
+      <header>
+        
+        <div class="navb">
+          <div class="container text-light ">
+            <div> 
+              <a href="/" class="logo mt-n1">
+                <img src="../../assets/img/lg.svg" alt="MWC logo">
+              </a>
+              <input class="menu-btn" type="checkbox" id="menu-btn"/>
+              <label class="menu-icon mt-2" for="menu-btn"><span class="navicon"></span></label>
+              <div class="dropdown-wrapper">
+                <input id="dropdown-t" type="radio">
+                <div class="dd text-uppercase font-size-sm">
+                  <input type="radio" id="option-1" name="options">
+                  <label for="option-1">
+                      <a href="/ru">
+                        <img src="../../assets/img/flags/ru.svg" class="mr-2" width="20" alt="Русский"/>
+                        Русский
+                      </a>
+                  </label>
+                  <input type="radio" id="option-2" name="options">
+                  <label for="option-2">
+                    <a href="/cn" >
+                      <img src="../../assets/img/flags/cn.svg" class="mr-2" width="20" alt="Italiano"/>
+                      简体中文
+                    </a>
+                  </label>
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/nl.svg" class="mr-2" width="20" alt="Nederlands"/>
+                      Türkçe
+                    </a>
+                  </label>
+                  <input type="radio" id="option-3" name="options">
+                  <label for="option-3">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/it.svg" class="mr-2" width="20" alt="Italiano"/>
+                      Italiano
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/nl.svg" class="mr-2" width="20" alt="Nederlands"/>
+                      Nederlands
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/pt.svg" class="mr-2" width="20" alt="Português"/>
+                      Português
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/es.svg" class="mr-2" width="20" alt="Français"/>
+                      Español
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/de.svg" class="mr-2" width="20" alt="Deutsch"/>
+                      Deutsch
+                    </a>
+                  </label>
+                </div>
+                <label for="dropdown-t" class="text-uppercase dropdown-t-label">
+                  <img class="mt-n1 mr-2" src="../../assets/img/flags/en.svg" width="20" alt="Русский"/>
+                  english
+                </label>
+              </div>
+              <ul class="menu text-light text-center" data-toggle="dropdown-wrapper">
+                <li><a class="text-primary" href="/">Home</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="wallet">Wallets</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="exchange">Exchanges</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="miner">Miners</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="https://explorer.mwc.mw">Explorer</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li>
+                  <a>
+                    Ressources
+                    <i class="mwi-angle-down align-middle mt-n1"></i>
+                  </a>
+                  <ul>
+                    <li><a href="news">News</a></li>
+                    <li><a href="docs">Documentation</a></li>
+                    <li><a href="roadmap">roadmap</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="team">Team</a></li>
+                    <li><a href="community">community</a></li>
+                    <li><a href="https://github.com/mwcproject/docs/blob/master/whitepaper.pdf">Whitepaper</a></li>
+                  </ul>
+                </li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="crownfunding.mwc.mw">crownfunding</a></li>
+              </ul>
+            <div>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Hero-->
+      <section class="bg-dark py-lg-5 pt-2 pb-5">
+        <div class="container d-flex flex-column justify-content-lg-around justify-content-center">
+          <div class="row ml-md-4 ml-sm-0 py-lg-5 py-0">
+            <div class="col-lg-8 col-md-10 col-sm-10 order-lg-1 order-2 mx-lg-0 mx-sm-auto text-lg-left text-center">
+              <h3 class="display-1 text-uppercase mx-auto pb-lg-1 text-light">
+                FAQ
+              </h3>
+              <h4 class="col-md-12 col-12 mx-md-0 mx-auto text-light pb-4">
+                For hodlers who want to buy, miners who want to sell and everyone in between the exchanges are the liquidity watering hole where all market participants meet. 
+              </h4>
+              <div class="row pt-lg-4 mx-auto">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-10 mx-auto">
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Overview
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Economics
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Mining
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Privacy
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Technical
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Community
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Ressources
+                  </a>
+                  <a href="#desktop-wallet" class="btn btn-gradient btn-border-dark btn-pill mx-1 mb-3">
+                    Anything else?
+                  </a>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-10 col-sm-10 col-9 order-lg-2 order-1 mx-auto mb-lg-0 mb-sm-5 mb-4">
+              <div class="mx-auto text-center">
+                <img src="/assets/img/exchange/ex.png" width="350">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Parallax bg -->
+        <!--<div class="jarallax-img" style="background-image: url(../../assets/img/home/hero/halftone.jpg);"></div>-->
+      </section>
+
+
+      <section class="container">
+        <div class="my-6">
+          <h1 class="text-uppercase pb-lg-1 text-center">
+            Overview
+          </h1>
+          <div class="d-md-flex d-block py-2">
+            <div class="col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck1">
+                 <label class="tab-label" for="chck1">What is MWC?</label>
+                 <div class="tab-content ">
+                    mwc
+                 </div>
+              </div>
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck2">
+                 <label class="tab-label" for="chck2">Where to download the GUI wallet?</label>
+                 <div class="tab-content">
+                    mwc
+                 </div>
+              </div>
+            </div>
+            <div class=" col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck3">
+                <label class="tab-label" for="chck3">Does the GUI wallet has it's own node?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck4">
+                <label class="tab-label" for="chck4">How to use the GUI wallet?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="my-6">
+          <h1 class="text-uppercase pb-lg-1 text-center">
+            Economics
+          </h1>
+          <div class="d-md-flex d-block py-2">
+            <div class="col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck5">
+                 <label class="tab-label" for="chck5">What is MWC?</label>
+                 <div class="tab-content ">
+                    mwc
+                 </div>
+              </div>
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck6">
+                 <label class="tab-label" for="chck6">Where to download the GUI wallet?</label>
+                 <div class="tab-content">
+                    mwc
+                 </div>
+              </div>
+            </div>
+            <div class=" col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck7">
+                <label class="tab-label" for="chck7">Does the GUI wallet has it's own node?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck8">
+                <label class="tab-label" for="chck8">How to use the GUI wallet?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="my-6">
+          <h1 class="text-uppercase pb-lg-1 text-center">
+            Mining
+          </h1>
+          <div class="d-md-flex d-block py-2">
+            <div class="col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck9">
+                 <label class="tab-label" for="chck9">What is MWC?</label>
+                 <div class="tab-content ">
+                    mwc
+                 </div>
+              </div>
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck10">
+                 <label class="tab-label" for="chck10">Where to download the GUI wallet?</label>
+                 <div class="tab-content">
+                    mwc
+                 </div>
+              </div>
+            </div>
+            <div class=" col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck11">
+                <label class="tab-label" for="chck11">Does the GUI wallet has it's own node?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck12">
+                <label class="tab-label" for="chck12">How to use the GUI wallet?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-6">
+          <h1 class="text-uppercase pb-lg-1 text-center">
+            Technical
+          </h1>
+          <div class="d-md-flex d-block py-2">
+            <div class="col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck9">
+                 <label class="tab-label" for="chck9">What is MWC?</label>
+                 <div class="tab-content ">
+                    mwc
+                 </div>
+              </div>
+              <div class="tab-faq mb-2">
+                 <input type="checkbox" id="chck10">
+                 <label class="tab-label" for="chck10">Where to download the GUI wallet?</label>
+                 <div class="tab-content">
+                    mwc
+                 </div>
+              </div>
+            </div>
+            <div class=" col-md-6 col-12 tabs-faq mx-auto">
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck11">
+                <label class="tab-label" for="chck11">Does the GUI wallet has it's own node?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+              <div class="tab-faq mb-2">
+                <input type="checkbox" id="chck12">
+                <label class="tab-label" for="chck12">How to use the GUI wallet?</label>
+                <div class="tab-content">
+                   mwc
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container my-lg-3 py-md-5 py-4">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-12 order-lg-1 order-1 mb-lg-0 mb-4">
+            <a class="d-inline-block mb-4 mr-2" href="">
+              <img src="../../assets/img/lg.svg" width="130" alt="mwc logo">
+            </a>
+            <div>
+              <a href="" class="social-btn mb-1 mt-md-0 mt-sm-1">
+                <i class="mwi-forum"></i>
+              </a>
+              <a href="" class="social-btn mb-1 mt-md-0 mt-sm-1">
+                <i class="mwi-github"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-discord"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-telegram"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-bitcoin"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Utility</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Block Explorer</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Network Statistics</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Network Stats CSV</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Full Node</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Cold Storage - GUI</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Cold Storage - CLI</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Airdrop Info</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Airdrop Balance</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Reading</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Documentation</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Roadmap</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Resources</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Articles</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Whitepaper</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MW Whitepaper</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">With Poelstra's Updates</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">BIP- Sig / Private Keys</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Wallets</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC GUI Wallet</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC 713 Wallet</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Wallet for Full Node</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Mining</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Mining Info</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Coin Calculators C31</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">minerstat</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Mining Pool Stat C31</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">What To Mine</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Mining</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Dashboard</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">What To Mine</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- js libraries and plugins-->
+    <!--<script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../../assets/js/style.min.js"></script>-->
+  </body>
+</html>

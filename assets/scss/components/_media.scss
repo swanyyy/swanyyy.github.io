@@ -1,0 +1,16 @@
+//
+// Media
+// --------------------------------------------------
+
+
+.media > img {
+  flex-shrink: 0;
+}
+
+.media-body {
+  flex: inherit;
+}
+
+.border-xs{
+  border-radius: 2px;
+}

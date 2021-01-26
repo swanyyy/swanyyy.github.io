@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MWC - MimbleWimble Coin | Scalable cryptocurrency based on the Mimblewimble Protocol</title>
+
+    <meta name="description" content="Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.">
+    <meta name="keywords" content="Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.">
+    <meta name="author" content="MWC">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/mwc.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/mwc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/mwc.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/mwc.png">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/css/style.min.css">
+  </head>
+
+  <body>
+    <!--<div class="warning">
+      <div class="container" >
+        Important : MWC is hardforking block xxxx, make sure to update to your wallet to the v1.0.0
+      </div>
+    </div>-->
+    <main class="mw-page-wrapper position-relative">
+
+      <!-- Navbar -->
+      <header>
+        
+        <div class="navb">
+          <div class="container text-light ">
+            <div> 
+              <a href="/" class="logo mt-n1">
+                <img src="../../assets/img/lg.svg" alt="MWC logo">
+              </a>
+              <input class="menu-btn" type="checkbox" id="menu-btn"/>
+              <label class="menu-icon mt-2" for="menu-btn"><span class="navicon"></span></label>
+              <div class="dropdown-wrapper">
+                <input id="dropdown-t" type="radio">
+                <div class="dd text-uppercase font-size-sm">
+                  <input type="radio" id="option-1" name="options">
+                  <label for="option-1">
+                      <a href="/ru">
+                        <img src="../../assets/img/flags/ru.svg" class="mr-2" width="20" alt="Русский"/>
+                        Русский
+                      </a>
+                  </label>
+                  <input type="radio" id="option-2" name="options">
+                  <label for="option-2">
+                    <a href="/cn" >
+                      <img src="../../assets/img/flags/cn.svg" class="mr-2" width="20" alt="Italiano"/>
+                      简体中文
+                    </a>
+                  </label>
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/nl.svg" class="mr-2" width="20" alt="Nederlands"/>
+                      Türkçe
+                    </a>
+                  </label>
+                  <input type="radio" id="option-3" name="options">
+                  <label for="option-3">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/it.svg" class="mr-2" width="20" alt="Italiano"/>
+                      Italiano
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/ne">
+                      <img src="../../assets/img/flags/nl.svg" class="mr-2" width="20" alt="Nederlands"/>
+                      Nederlands
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/pt">
+                      <img src="../../assets/img/flags/pt.svg" class="mr-2" width="20" alt="Português"/>
+                      Português
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/es">
+                      <img src="../../assets/img/flags/es.svg" class="mr-2" width="20" alt="Français"/>
+                      Español
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/de">
+                      <img src="../../assets/img/flags/de.svg" class="mr-2" width="20" alt="Deutsch"/>
+                      Deutsch
+                    </a>
+                  </label>
+                </div>
+                <label for="dropdown-t" class="text-uppercase dropdown-t-label">
+                  <img class="mt-n1 mr-2" src="../../assets/img/flags/en.svg" width="20" alt="Русский"/>
+                  english
+                </label>
+              </div>
+              <ul class="menu text-light text-center">
+                <li><a class="text-primary" href="/">Home</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="wallet">Wallets</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="exchange">Exchanges</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="miner">Miners</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="https://explorer.mwc.mw">Explorer</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li>
+                  <a>
+                    Ressources
+                    <i class="mwi-angle-down align-middle mt-n1"></i>
+                  </a>
+                  <ul>
+                    <li><a href="news">News</a></li>
+                    <li><a href="docs">Documentation</a></li>
+                    <li><a href="roadmap">roadmap</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="team">Team</a></li>
+                    <li><a href="community">community</a></li>
+                    <li><a href="https://github.com/mwcproject/docs/blob/master/whitepaper.pdf">Whitepaper</a></li>
+                  </ul>
+                </li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="crownfunding.mwc.mw">crownfunding</a></li>
+              </ul>
+            <div>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-dark py-5">
+        <div class="container d-flex flex-column justify-content-lg-around justify-content-center mx-auto py-lg-6 py-md-0 py-2">
+          <div class="row ml-md-4 ml-sm-0 py-lg-5 py-0">
+            <div class="col-lg-7 col-md-8 col-sm-10 order-lg-1 order-2 mx-auto text-lg-left text-center">
+              <!--Responsive FOlD pb-->
+              <h1 class="tit shado text-light mb-n3">
+                MWC
+              </h1>
+              <h2 class="h1 shado mt-n4 mb-4 pb-lg-1 font-weight-bold text-light">
+                <i>Extremely Scarce Ghost Money</i>
+              </h2>
+              <h2 class="h4 mb-4 pb-lg-1 text-light font-weight-normal">
+                <i></i>With a provable supply cap of 20,000,000 MWC. MimbleWimbleCoin is a scarce pure proof of work Mimblewimble based coin that enables greater network scalability, privacy, and fungibility than legacy blockchain protocols. 
+              </h2>
+              <h3 class="h5 display-6 my-lg-3 py-lg-1 text-light">
+                <i>All transactions on the base layer use Greg Maxwell's Coin Join with his Confidential Transactions and signature aggregation.</i>
+              </h3>
+              <div class="row pt-lg-4">
+                <div class="col-lg-12 col-md-7 col-sm-7 col-10 mx-auto">
+                  <a href="wallet" class="btn btn-gradient btn-border btn-pill  mx-1 mb-3 text-uppercase">
+                    Download Wallet
+                  </a>
+                  <a href="exchange" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mx-2 mb-3"> 
+                    Buy MWC
+                  </a>
+                  <a href="miner" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mb-3">
+                    Mine MWC
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-8 col-sm-10 order-lg-2 order-1 mx-auto mb-lg-0 mb-sm-5 mb-4">
+              <div class="mx-auto mt-lg-6">
+                <div class="circle mx-auto"  data-depth="0.3">
+                  <div class="block1"></div>
+                  <div class="block2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Parallax bg -->
+        <!--<div class="jarallax-img" style="background-image: url(../../assets/img/home/hero/halftone.jpg);"></div>-->
+      </section>
+
+      <section id="mobile" >
+        <div class="container py-3">
+          <div class="text-center pt-6 pb-2">
+            <h2 class="h1 text-center text-uppercase mb-md-n2 mb-n2 mb-1">ghost money innovation</h2>
+            <h5 class="h4 text-center text-uppercase">mimblewimblecoin</h5>
+            <p class="col-lg-6 col-md-9 col-10 mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="row align-items-center pt-3 pt-lg-0">
+            <div class="col-md-6 order-md-2 order-1 mt-lg-5 mt-2 pb-5">
+              <div class="text-right col-md-12 col-12">
+                <video class="container video px-0" controls>
+                  <source src="assets/img/blockchain.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 order-md-1 order-2 text-md-left text-center">
+              <h3 class="text-uppercase mb-md-n2 mb-n2 mb-1">mimblewimble</h3>
+              <h4 class="text-uppercase font-weight-normal mb-4">a powerful protocol</h4>
+              <h5 class="mb-5">
+                Decentralized, secure, private and user-friendly, atomic swaps enable users to transfer wealth privately without relying
+                 on a third party. At the same time the Swap process is handing over all control from Exchanges to end users themselves.
+                 There are no links between blockchains, no traces to identify what asset was swapped nor the amount of MWC involved.
+              </h5>
+              <div class="col-lg-12 col-md-12 col-10 mx-auto">
+                <a href="wallet" class="btn btn-gradient btn-border btn-pill mx-1 mb-3 text-uppercase">
+                  whitepaper
+                </a>
+                <a href="exchange" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mx-1 mb-3"> 
+                  Mimblewimble
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mobile">
+        <div class="container pt-lg-6 py-3">
+          <div class="row align-items-center pt-3 pt-lg-0">
+            <div class="col-md-5 order-md-1 order-2 mt-lg-n2">
+              <div class="position-relative mx-auto" style="max-width: 495px;">
+                <img src="assets/img/home/wallet-laptop.png" alt="nit" data-jarallax-element="5 5" data-disable-parallax-down="lg">
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1 col-md-7 order-md-2 order-1 text-md-left text-center pb-md-5">
+              <h3 class="text-uppercase mb-md-n2 mb-n2 mb-1">the superior</h3>
+              <h4 class="text-uppercase font-weight-normal mb-4">qualitative money</h4>
+              <h5>
+                The mission of the MWC developer team is to match and exceed every other good in the market with regard to the ten primary monetary 
+                characteristics in order to produce a good that is the superior qualitative money. Good money in the Information Age is  
+                <a class="no-style" href="/wallet">recognizable</a>, 
+                <a class="no-style" href="/wallet">scarce</a>, 
+                <a class="no-style" href="/wallet">censorship resistant</a>, 
+                <a class="no-style" href="/wallet">durable</a>, 
+                <a class="no-style" href="/wallet">indestructible</a>, 
+                <a class="no-style" href="/wallet">extensible</a>, 
+                <a class="no-style" href="/wallet">salable</a>, 
+                <a class="no-style" href="/wallet">portable</a>, 
+                <a class="no-style" href="/wallet">fungible</a>, 
+                <a class="no-style" href="/wallet">private</a>
+                 and 
+                <a class="no-style" href="/wallet">divisible</a>.
+              </h5>
+              <a href="exchange" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mx-2 mb-3 "> 
+                good money
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        <!-- Atomic swap -->
+      <section id="mobile">
+        <div class="container pt-lg-3 pt-3 pb-6">
+          <div class="row align-items-center pt-2 pt-lg-0">
+            <div class="col-md-5 offset-lg-1 order-md-2 order-2 mt-lg-n2">
+              <div class="position-relative mx-auto" style="max-width: 495px;">
+                <img src="assets/img/home/wallet-homepage.png" alt="atomic swap" data-jarallax-element="5 5" data-disable-parallax-down="lg">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-7 order-md-1 order-1 text-md-left text-center pb-md-5">
+              <h3 class="text-uppercase mb-md-n2 mb-n2 mb-1">development</h3>
+              <h4 class="text-uppercase font-weight-normal mb-4">Focused on Privacy</h4>
+              <h5 class="pb-2 text-muted">
+                Decentralized, secure, private and user-friendly, atomic swaps enable users to transfer wealth privately without relying
+                 on a third party. At the same time the Swap process is handing over all control from Exchanges to end users themselves. 
+                 There are no links between blockchains, no traces to identify what asset was swapped nor the amount of MWC involved.<br>
+                  Atomic Swaps for MWC/BTC and MWC/BCH trading pairs on the Desktop Wallet.
+              </h5>
+              <a href="exchange" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mx-2 mb-3 "> 
+                roadmap
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mobile" class="diagonal">
+        <div class="diagonal-box bg-two">
+          <div class="content container text-center mb-lg-3 pb-md-2 ">
+            <h2 class="h1 text-light text-uppercase">What MWC offers?</h2>
+            <h5 class="col-md-8 mx-auto text-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </h5>
+          </div>
+          <div class="container row justify-content-center mx-auto">
+            <div class="col-lg-4 col-md-5 col-12 mt-2">
+              <a class="pop">
+                <div class="bubble">
+                  <div class="inner">
+                    <img src="/assets/img/home/usability.svg" width="50" alt="">
+                  </div>
+                </div>
+                <h3>Privacy</h3>
+                <!--<em></em>-->
+                <p>MWC brings a high level of user privacy, obfuscating the details of transactions.</p>
+                <!--<span class="btn btn-sm btn-outline-primary">Learn More</span>-->
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-5 col-12 mt-2">
+              <a class="pop">
+                <div class="bubble">
+                  <div class="inner">
+                    <img src="/assets/img/home/usability.svg" width="50" alt="">
+                  </div>
+                </div>
+                <h3>Scalability</h3>
+                <!--<em></em>-->
+                <p>MWC brings a high level of user privacy, obfuscating the details of transactions.</p>
+                <!--<span class="btn btn-sm btn-outline-primary">Learn More</span>-->
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-5 col-12 mt-2">
+              <a class="pop">
+                <div class="bubble">
+                  <div class="inner">
+                    <img src="/assets/img/home/usability.svg" width="50" alt="">
+                  </div>
+                </div>
+                <h3>Usability</h3>
+                <!--<em></em>-->
+                <p>MWC brings a high level of user privacy, obfuscating the details of transactions.</p>
+                <!--<span class="btn btn-sm btn-outline-primary">Learn More</span>-->
+              </a>
+            </div>
+          </div>
+      </section>
+
+      <!-- Mobile -->
+      <section id="mobile" class="container pt-lg-6 pt-6 pb-3">
+        <div class="text-center pb-5">
+          
+          <h2 class="h1 text-center text-uppercase mb-n2">Desktop & Mobile</h2>
+          <h5 class="h4 text-center text-uppercase">wallet</h5>
+          <p class="col-lg-6 col-md-9 col-10 mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-5 offset-lg-1 order-md-2 order-2">
+            <div class="position-relative mx-auto" style="max-width: 495px;">
+              <img src="assets/img/home/wallet-homepage.png" alt="mobile wallet" data-jarallax-element="5 5" data-disable-parallax-down="lg">
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 order-md-1 order-1 text-md-left text-center pb-md-5 mx-auto">
+            <h3 class="text-uppercase">user friendly</h3>
+            <h5 class="pb-2 text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </h5>
+            <div class="row mx-auto justify-content-center">
+              <a href="mine" class="btn btn-gradient btn-pill mb-3 mr-3">
+                Download Wallet
+              </a>
+              <div class="font-size-md mt-n3 pt-3">
+
+                <a href="" class="social-btn page-social font-size-mb mb-1 mt-md-0 mt-sm-1">
+                  <i class="mwi-windows"></i>
+                </a>
+                <a href="" class="social-btn page-social font-size-mb mb-1 mt-md-0 mt-sm-1">
+                  <i class="mwi-linux"></i>
+                </a>
+                <a href="" class="social-btn page-social font-size-mb mr-1 mb-2 mt-md-0 mt-sm-1">
+                  <i class="mwi-macos"></i>
+                </a>
+                <a href="" class="social-btn page-social font-size-mb mr-1 mb-2 mt-md-0 mt-sm-1">
+                  <i class="mwi-android"></i>
+                </a>
+                <a href="" class="social-btn page-social font-size-mb mr-1 mb-2 mt-md-0 mt-sm-1">
+                  <i class="mwi-apple"></i>
+                </a>
+                <a href="" class="social-btn page-social font-size-mb mr-1 mb-2 mt-md-0 mt-sm-1">
+                  <i class="mwi-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Non interactive transaction -->
+      <section id="mobile">
+        <div class="container pt-lg-6 py-3">
+          <div class="row align-items-center pt-3 pt-lg-0">
+            <div class="col-md-5 order-md-1 order-2 mt-lg-n2">
+              <div class="position-relative mx-auto" style="max-width: 495px;">
+                <img src="assets/img/home/wallet-laptop.png" alt="nit" data-jarallax-element="5 5" data-disable-parallax-down="lg">
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1 col-md-7 order-md-2 order-1 text-md-left text-center pb-md-5">
+              <h3 class="text-uppercase">Non-Interactive Transaction</h3>
+              <h5 class="pb-2 text-muted">
+                To improve the easy of use, the common user experience and further consolidate the privacy of MWC, 
+                we are integrating both one-sided payment (non-interactive transaction, or realtime off-line transaction) 
+                feature and the stealth address feature. MWC users will get an address for the wallet, which enable the coin 
+                receiving by publishing this stealth address to the sender, in the same time, the published transaction data 
+                will never disclose this address info for other people.
+              </h5>
+              <button class="btn btn-hover-shadow btn-gradient btn-pill text-center mr-3 mb-4" type="button">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        <!-- Atomic swap -->
+      <section id="mobile">
+        <div class="container pt-lg-3 pt-3 pb-6">
+          <div class="row align-items-center pt-2 pt-lg-0">
+            <div class="col-md-5 offset-lg-1 order-md-2 order-2 mt-lg-n2">
+              <div class="position-relative mx-auto" style="max-width: 495px;">
+                <img src="assets/img/home/wallet-homepage.png" alt="atomic swap" data-jarallax-element="5 5" data-disable-parallax-down="lg">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-7 order-md-1 order-1 text-md-left text-center pb-md-5">
+              <h3 class="text-uppercase">Atomic Swap</h3>
+              <h5 class="pb-2 text-muted">
+                Decentralized, secure, private and user-friendly, atomic swaps enable users to transfer wealth privately without relying
+                 on a third party. At the same time the Swap process is handing over all control from Exchanges to end users themselves. 
+                 There are no links between blockchains, no traces to identify what asset was swapped nor the amount of MWC involved.<br>
+                  Atomic Swaps for MWC/BTC and MWC/BCH trading pairs on the Desktop Wallet.
+              </h5>
+              <button class="btn btn-hover-shadow btn-gradient btn-pill text-center mr-3 mb-4" type="button">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- News -->
+      <section class="diagonal">
+        <div class="diagonal-box bg-three">
+          <div class="container text-info">
+            <div class="content row justify-content-center">
+              <div class="col-lg-8 col-md-10 text-center">
+              
+              <h2 class="h1 pb-md-2 text-center text-uppercase  text-light mb-md-n3 mb-n2 ">Latest</h2>
+              <h5 class="h4 text-center text-uppercase text-light ">News & Events</h5>
+              <div class="text-center">
+                <a href="/news" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mx-2 mb-3 "> 
+                  More Articles
+                </a>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 mb-sm-0 mb-grid-gutter pb-5">
+              <article class="mw-image-scale card h-100 border-0 bg-transparent">
+                <a href="" class="mw-image-inner card-header mb-3 p-0 border-0 rounded">
+                  <img src="../../assets/img/news/news_01.jpg" alt="Announcement">
+                </a>
+                <div class="card-body p-0">
+                  <ul class="nav nav-muted mb-2">
+                    <li class=" mr-2">
+                      <span class="d-inline-block mr-2 p-0 font-size-sm font-weight-normal">
+                        December 16, 2020
+                      </span>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class=" mr-2">
+                      <span class="d-inline-block mr-2 p-0 font-size-sm font-weight-normal">
+                        By MWC Team
+                      </span>
+                    </li>
+                  </ul>
+                  <h3 class="h5 mb-2">
+                    <a class="nav-link font-weight-bold">MWC Development team release Atomic Swaps!</a>
+                  </h3>
+                  <p class="mb-3">The most recent MWC Desktop QT wallet V1.1 release includes Atomic Swaps for MWC/BTC and MWC/BCH trading pairs...</p>
+                </div>
+              </article>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-sm-0 mb-grid-gutter pb-5">
+              <article class="mw-image-scale card h-100 border-0 bg-transparent">
+                <a class="mw-image-inner card-header mb-3 p-0 border-0 rounded">
+                  <img src="../../assets/img/news/news_02.jpg" alt="Announcement">
+                </a>
+                <div class="card-body p-0">
+                  <ul class="nav nav-muted mb-2">
+                    <li class="mr-2">
+                      <span class="d-inline-block mr-2 p-0 font-size-sm font-weight-normal">
+                        November 27, 2020
+                      </span>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class=" mr-2">
+                      <span class="d-inline-block mr-2 p-0 font-size-sm font-weight-normal">
+                        By Chris Dev
+                      </span>
+                    </li>
+                  </ul>
+                  <h3 class="h5 mb-2 nav-dark">
+                    <a class="nav-link font-weight-bold">Part 4 of 4: Mimblewimble</a>
+                  </h3>
+                  <p class="mb-3">Upon MWC’s launch, I began writing a 4 part series on Mimblewimble. The first three installments were on scalability, privacy, and fungibility...</p>
+                </div>
+              </article>
+              </div>
+              <div  class="col-lg-4 col-sm-6 mb-sm-0 mb-grid-gutter mx-auto pb-5">
+                  <article class="mw-image-scale card h-100 border-0 bg-transparent">
+                    <a class="mw-image-inner card-header mb-3 p-0 border-0 rounded">
+                      <img src="../../assets/img/news/news_01.jpg" alt="Announcement">
+                    </a>
+                    <div class="card-body p-0">
+                      <ul class="nav nav-muted mb-2">
+                        <li class="mr-2">
+                          <span class="d-inline-block mr-2 p-0 font-size-sm font-weight-normal">
+                            November 22, 2020
+                          </span>
+                          <span class="text-border px-1">|</span>
+                        </li>
+                        <li class=" mr-2">
+                          <span class="d-inline-block mr-2 p-0 font-size-sm font-weight-normal">
+                            By Nico Porter
+                          </span>
+                        </li>
+                      </ul>
+                      <h3 class="h5 mb-2 nav-dark">
+                        <a class="nav-link font-weight-bold">Non-Interactive Transaction (NIT) and Stealth Address</a>
+                      </h3>
+                      <p class="mb-3">Groundbreaking privacy and much improved user experience is coming to MWC!  To improve the easy of use, the common user experience and...</p>
+                    </div>
+                  </article>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="py-6 bg-no-repeat bg-position-center-bottom bg-size-contain">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+              <h2 class="h1 text-center text-uppercase mb-sm-n2 mb-1">MWC community</h2>
+              <h5 class="h4 text-center text-uppercase mb-5">Get in touch with us</h5>
+            </div>
+            <div class="col-lg-12 row text-center justify-content-center">
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-telegram"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    Telegram
+                  </p>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-discord"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    Discord
+                  </p>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-forum"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    Forum
+                  </p>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-github"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    Github
+                  </p>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-twitter"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    Twitter
+                  </p>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-bitcoin"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    BitcoinTalk
+                  </p>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="" class="no-style page-social font-size-xl mx-5">
+                  <i class="mwi-youtube"></i>
+                  <p class="font-weight-bold font-size-base mt-n3">
+                    Youtube
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-2 bg-position-center-bottom bg-size-contain">
+        <div class="container pt-md-4 pt-3 pb-md-5 pb-4">
+          <div class="card bg-faded-primary justify-content-center">
+            <div class="col-lg-12 col-md-10 py-5 px-5">
+              <div class="text-left text-dark">
+                <h2 class="h1 text-uppercase mb-sm-n2 mb-1">MWC signal</h2>
+                <h5 class="h4 text-uppercase mb-5">updates</h5>
+              </div>
+              <div class="text-right">
+                <a href="https://blockfolio.com/coin/MWC_2" class="btn btn-gradient btn-border btn-pill  mx-1 mb-3 text-uppercase">
+                  Blockfolio
+                </a>
+                <a href="https://blockfolio.com/coin/MWC_2" class="btn btn-gradient btn-border btn-pill  mx-1 mb-3 text-uppercase">
+                  CoinMarketCap
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5">
+        <h3 class="h5 font-weight-bold text-center text-uppercase ">Mentionned in</h3>
+        <div class="row mt-2 mb-3 justify-content-center">
+          <div class="mx-3 my-2">
+            <a href="https://blockonomi.com/mwc-extremely-scarce-scalable-ghost-money-has-finally-arrived" target="_blank">
+              <img class="zoom" src="assets/img/home/mention/blockonomi.png" width="150" alt="img">
+            </a>
+          </div>
+          <div class="mx-3 my-2">
+            <a href="https://blockonomi.com/mwc-extremely-scarce-scalable-ghost-money-has-finally-arrived">
+              <img class="zoom"  src="data:image/svg+xml;charset=utf-8,%3Csvg width='268' height='62' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M38.838 45.114l-11.166 4.799v-.48c-2.153.545-4.538.859-6.797.96-10.501-.101-18.836-5.534-18.933-11.999v-2.4c3.449 4.958 10.47 8.28 18.933 8.16 2.863.12 5.792-.328 8.253-.96l.971-2.4c-2.919.861-6.105 1.46-9.224 1.44-10.501.02-18.836-5.413-18.933-11.998v-1.92c3.449 4.583 10.455 7.906 18.933 7.679 3.814.227 7.544-.566 10.68-1.92l.486-2.4c-3.064 1.598-7.035 2.526-11.166 2.4-10.501.126-18.836-5.307-18.933-11.998v-1.92c3.449 4.69 10.47 8.012 18.933 8.159 4.81-.147 9.37-1.404 13.108-3.36l.486-2.88c-3.393 2.486-8.346 4.088-13.594 4.32C10.374 26.164 2.04 20.73 1.942 13.918 2.039 7.439 10.374 2.006 20.875 1.92c6.26.086 12.074 2.256 15.536 5.759l.337.555 2.448.01-.358-.565C35.395 3.053 28.509 0 20.875 0 9.256 0 0 6.331 0 13.918v24.956c.408 7.406 9.453 13.438 20.875 13.438 7.544 0 14.324-2.933 17.963-7.198z' fill='%23FFF'/%3E%3Cpath d='M34.296 62l3.92-16.469-11.269 4.844 6.86-28.578h-13.23l3.43-14.047h42.136l-3.43 14.047H48.995l-2.94 7.75 15.188-6.297L34.296 62zm6.86-19.86l-1.96 9.688L55.364 27.61l-13.229 5.813 5.88-13.563h13.228l2.45-10.172H25.477l-2.45 10.172h13.229l-6.37 27.125 11.27-4.843zm54.015-25.113c-.116 1.606-.709 2.87-1.779 3.794-1.07.923-2.48 1.384-4.23 1.384-1.913 0-3.42-.644-4.516-1.933C83.549 18.984 83 17.215 83 14.966v-.913c0-1.435.253-2.7.759-3.794.506-1.093 1.229-1.933 2.168-2.517.94-.585 2.032-.877 3.277-.877 1.722 0 3.11.462 4.163 1.385 1.052.922 1.66 2.218 1.825 3.886h-3.076c-.075-.964-.344-1.663-.805-2.097-.462-.434-1.164-.651-2.107-.651-1.026 0-1.793.367-2.302 1.102-.51.735-.771 1.875-.785 3.42v1.128c0 1.613.245 2.792.733 3.537.49.745 1.26 1.118 2.313 1.118.95 0 1.659-.217 2.127-.651.469-.434.737-1.106.805-2.015h3.076zm15.884-2.153c0 1.47-.26 2.758-.78 3.865-.519 1.108-1.262 1.962-2.23 2.564-.967.601-2.076.902-3.327.902-1.237 0-2.341-.297-3.312-.892-.97-.595-1.723-1.444-2.256-2.548-.533-1.104-.803-2.374-.81-3.81v-.738c0-1.47.265-2.763.795-3.88.53-1.118 1.278-1.976 2.246-2.575.967-.598 2.073-.897 3.317-.897 1.244 0 2.35.3 3.317.897.967.599 1.716 1.457 2.245 2.574.53 1.118.795 2.408.795 3.871v.667zm-3.117-.677c0-1.566-.28-2.755-.84-3.569-.561-.813-1.361-1.22-2.4-1.22-1.033 0-1.829.402-2.39 1.205-.56.803-.844 1.98-.85 3.533v.728c0 1.524.28 2.707.84 3.547.56.841 1.367 1.262 2.42 1.262 1.032 0 1.825-.405 2.38-1.215.553-.81.833-1.991.84-3.543v-.728zM118.16 22h-3.076V7.07h3.076V22zm16.592 0h-3.077l-5.988-9.823V22h-3.076V7.07h3.076l5.999 9.844V7.07h3.066V22zM149.98 9.562h-4.573V22h-3.076V9.562h-4.512V7.07h12.161v2.492zm12.336 5.968h-5.906v3.999h6.931V22h-10.008V7.07h9.988v2.492h-6.911v3.558h5.906v2.41zm7.506 3.999h6.532V22h-9.608V7.07h3.076v12.46zm18.878-4h-5.906v4h6.931V22h-10.007V7.07h9.987v2.492h-6.911v3.558h5.906v2.41zm16.243 4.584c-.554.663-1.337 1.178-2.349 1.543-1.011.366-2.132.55-3.363.55-1.292 0-2.425-.283-3.399-.847-.974-.564-1.726-1.382-2.256-2.456-.53-1.073-.801-2.334-.815-3.783v-1.016c0-1.49.251-2.78.754-3.87.502-1.09 1.227-1.925 2.173-2.502.947-.578 2.056-.867 3.328-.867 1.77 0 3.155.422 4.153 1.267.998.844 1.589 2.073 1.774 3.686h-2.995c-.136-.855-.439-1.48-.907-1.877-.468-.396-1.113-.594-1.933-.594-1.046 0-1.842.393-2.39 1.179-.546.786-.823 1.955-.83 3.507v.953c0 1.566.298 2.748.892 3.548.595.8 1.467 1.2 2.615 1.2 1.155 0 1.98-.246 2.471-.738v-2.574h-2.799v-2.266h5.876v5.957zm9.618-3.578h-2.45V22h-3.077V7.07h5.548c1.763 0 3.124.393 4.08 1.18.958.786 1.436 1.896 1.436 3.332 0 1.019-.22 1.868-.661 2.548-.441.68-1.11 1.222-2.005 1.625l3.23 6.101V22h-3.302l-2.799-5.465zm-2.45-2.492h2.48c.773 0 1.371-.197 1.795-.59.424-.393.636-.934.636-1.625 0-.704-.2-1.258-.6-1.661-.4-.403-1.013-.605-1.84-.605h-2.472v4.481zm20.354 4.88h-5.394L226.046 22h-3.271l5.558-14.93h2.85L236.771 22h-3.27l-1.036-3.076zm-4.563-2.49h3.732l-1.876-5.59-1.856 5.59zm14.94.307V22h-3.076V7.07h5.824c1.121 0 2.107.205 2.958.616.852.41 1.506.992 1.964 1.748.458.755.687 1.615.687 2.579 0 1.463-.5 2.616-1.502 3.46-1.002.845-2.388 1.267-4.158 1.267h-2.697zm0-2.492h2.748c.814 0 1.434-.191 1.861-.574.428-.383.641-.93.641-1.64 0-.732-.215-1.324-.646-1.775-.43-.45-1.025-.683-1.784-.697h-2.82v4.686zM267.062 22h-3.076v-6.398h-5.998V22h-3.077V7.07h3.077v6.05h5.998V7.07h3.076V22z' fill='%23FABF2C'/%3E%3Cpath d='M91.46 35.83h-3.326V45h-1.838v-9.17H83v-1.494h8.46v1.494zm3.58 2.11c.581-.674 1.316-1.011 2.205-1.011 1.69 0 2.546.964 2.57 2.893V45h-1.779v-5.112c0-.547-.118-.934-.355-1.161-.237-.227-.585-.34-1.044-.34-.713 0-1.245.317-1.597.951V45h-1.78V33.75h1.78v4.19zm10.664 7.206c-1.128 0-2.042-.355-2.743-1.065-.7-.71-1.051-1.657-1.051-2.838v-.22c0-.791.153-1.498.458-2.12a3.484 3.484 0 011.285-1.454 3.398 3.398 0 011.846-.52c1.079 0 1.913.344 2.501 1.032.588.689.883 1.663.883 2.923v.718h-5.179c.054.654.273 1.171.656 1.552s.865.572 1.446.572c.816 0 1.48-.33 1.993-.99l.96.916a3.204 3.204 0 01-1.272 1.103c-.53.26-1.124.391-1.783.391zm-.212-6.79c-.489 0-.883.172-1.183.514-.3.341-.492.817-.575 1.428h3.39v-.132c-.038-.596-.197-1.046-.475-1.351-.279-.305-.664-.458-1.157-.458zM115.825 45v-6.606h-1.209v-1.319h1.209v-.725c0-.879.244-1.558.732-2.036.489-.479 1.172-.718 2.051-.718.313 0 .645.044.996.132l-.044 1.392a3.505 3.505 0 00-.681-.059c-.85 0-1.274.437-1.274 1.311v.703h1.61v1.319h-1.61V45h-1.78zm10.092-.776c-.522.615-1.265.922-2.227.922-.859 0-1.51-.251-1.951-.754-.442-.503-.663-1.23-.663-2.183v-5.134h1.78v5.112c0 1.006.417 1.51 1.252 1.51.864 0 1.448-.31 1.75-.93v-5.692h1.78V45h-1.677l-.044-.776zm6.364-9.075v1.926h1.4v1.319h-1.4v4.423c0 .303.06.522.18.656s.333.201.64.201c.206 0 .413-.024.623-.073v1.377a4.383 4.383 0 01-1.172.168c-1.367 0-2.05-.754-2.05-2.263v-4.49h-1.304v-1.318h1.303V35.15h1.78zm8.159 9.075c-.523.615-1.265.922-2.227.922-.86 0-1.51-.251-1.952-.754-.442-.503-.663-1.23-.663-2.183v-5.134h1.78v5.112c0 1.006.418 1.51 1.253 1.51.864 0 1.447-.31 1.75-.93v-5.692h1.78V45h-1.677l-.044-.776zm8.283-5.523a4.404 4.404 0 00-.725-.058c-.816 0-1.365.312-1.648.937V45h-1.78v-7.925h1.7l.043.886c.43-.688 1.026-1.032 1.787-1.032.254 0 .464.034.63.102l-.007 1.67zm5.075 6.445c-1.128 0-2.042-.355-2.743-1.065-.7-.71-1.051-1.657-1.051-2.838v-.22c0-.791.153-1.498.458-2.12a3.484 3.484 0 011.285-1.454 3.398 3.398 0 011.846-.52c1.079 0 1.913.344 2.501 1.032.588.689.883 1.663.883 2.923v.718h-5.179c.054.654.273 1.171.656 1.552s.865.572 1.446.572c.816 0 1.48-.33 1.993-.99l.96.916a3.204 3.204 0 01-1.272 1.103c-.53.26-1.124.391-1.783.391zm-.212-6.79c-.489 0-.883.172-1.183.514-.3.341-.492.817-.575 1.428h3.39v-.132c-.038-.596-.197-1.046-.475-1.351-.279-.305-.664-.458-1.157-.458zm9.373 2.608c0-.776.154-1.475.462-2.098a3.37 3.37 0 011.296-1.436c.557-.334 1.196-.501 1.92-.501 1.068 0 1.936.344 2.603 1.032.666.689 1.027 1.602 1.08 2.74l.008.417c0 .781-.15 1.48-.45 2.095a3.33 3.33 0 01-1.29 1.428c-.559.337-1.205.505-1.937.505-1.118 0-2.013-.372-2.685-1.116-.67-.745-1.007-1.738-1.007-2.978v-.088zm1.78.154c0 .816.169 1.454.506 1.915.336.462.805.693 1.406.693.6 0 1.068-.235 1.402-.704.335-.468.502-1.154.502-2.058 0-.8-.172-1.435-.516-1.904-.345-.469-.812-.703-1.403-.703-.58 0-1.042.23-1.384.692-.342.462-.513 1.151-.513 2.07zM173.06 45v-6.606h-1.209v-1.319h1.209v-.725c0-.879.244-1.558.732-2.036.489-.479 1.172-.718 2.051-.718.313 0 .645.044.996.132l-.044 1.392a3.505 3.505 0 00-.68-.059c-.85 0-1.275.437-1.275 1.311v.703h1.611v1.319h-1.611V45h-1.78zm11.3-7.925l.051.828c.557-.65 1.319-.974 2.285-.974 1.06 0 1.785.405 2.176 1.216.576-.811 1.386-1.216 2.431-1.216.874 0 1.525.241 1.952.725.427.483.646 1.196.656 2.138V45h-1.78v-5.156c0-.503-.11-.872-.33-1.106-.22-.235-.583-.352-1.09-.352-.406 0-.737.109-.993.326a1.719 1.719 0 00-.539.853l.008 5.435h-1.78v-5.215c-.025-.932-.5-1.399-1.428-1.399-.713 0-1.219.29-1.516.872V45h-1.78v-7.925h1.677zm11.645 3.89c0-.777.154-1.476.461-2.099a3.37 3.37 0 011.297-1.436c.556-.334 1.196-.501 1.919-.501 1.069 0 1.937.344 2.603 1.032.667.689 1.027 1.602 1.08 2.74l.008.417c0 .781-.15 1.48-.45 2.095a3.33 3.33 0 01-1.29 1.428c-.559.337-1.204.505-1.937.505-1.118 0-2.013-.372-2.684-1.116-.671-.745-1.007-1.738-1.007-2.978v-.088zm1.78.153c0 .816.168 1.454.505 1.915.337.462.806.693 1.406.693.6 0 1.068-.235 1.403-.704.334-.468.502-1.154.502-2.058 0-.8-.173-1.435-.517-1.904-.344-.469-.812-.703-1.402-.703-.581 0-1.043.23-1.385.692-.341.462-.512 1.151-.512 2.07zm9.345-4.043l.051.916c.586-.708 1.355-1.062 2.307-1.062 1.65 0 2.49.945 2.52 2.834V45h-1.78v-5.134c0-.503-.109-.876-.326-1.117-.217-.242-.572-.363-1.066-.363-.717 0-1.252.325-1.604.974V45h-1.78v-7.925h1.678zm10.78 8.071c-1.127 0-2.042-.355-2.742-1.065-.701-.71-1.051-1.657-1.051-2.838v-.22c0-.791.152-1.498.457-2.12a3.484 3.484 0 011.286-1.454 3.398 3.398 0 011.845-.52c1.08 0 1.913.344 2.502 1.032.588.689.882 1.663.882 2.923v.718h-5.178c.054.654.272 1.171.655 1.552.384.381.866.572 1.447.572.815 0 1.48-.33 1.992-.99l.96.916a3.204 3.204 0 01-1.271 1.103c-.53.26-1.124.391-1.784.391zm-.212-6.79c-.488 0-.882.172-1.183.514-.3.341-.492.817-.575 1.428h3.391v-.132c-.039-.596-.197-1.046-.476-1.351-.278-.305-.664-.458-1.157-.458zm8.049 4.095l1.611-5.376h1.897l-3.15 9.126c-.483 1.333-1.303 2-2.46 2a3.18 3.18 0 01-.857-.132v-1.377l.337.022c.449 0 .787-.082 1.014-.245.227-.164.407-.439.538-.824l.257-.682-2.783-7.888h1.919l1.677 5.376z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E" width="150" alt="img">
+            </a>
+          </div>
+          <div class="mx-3 my-2">
+            <a href="https://blockonomi.com/mwc-extremely-scarce-scalable-ghost-money-has-finally-arrived">
+              <img class="zoom" src="assets/img/home/mention/coindesk.png" width="150" alt="img">
+            </a>
+          </div>
+          <div class="mx-3 my-2">
+            <a href="https://blockonomi.com/mwc-extremely-scarce-scalable-ghost-money-has-finally-arrived">
+              <img class="zoom" src="assets/img/home/mention/coingape.png" width="120" alt="img">
+            </a>
+          </div>
+          <div class="mx-3 my-2">
+            <a href="https://blockonomi.com/mwc-extremely-scarce-scalable-ghost-money-has-finally-arrived">
+              <img class="zoom" src="assets/img/home/mention/coinpedia.png" width="120" alt="img">
+            </a>
+          </div>
+          <div class="mx-3 my-2">
+            <a href="https://blockonomi.com/mwc-extremely-scarce-scalable-ghost-money-has-finally-arrived">
+              <img class="zoom" src="assets/img/home/mention/cryptoresearch.png" width="120" alt="img">
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="mw-footer pt-3 bg-dark">
+      <div class="container my-lg-3 py-md-5 py-4">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-12 order-lg-1 order-1 mb-lg-0 mb-4">
+            <a class="d-inline-block mb-4 mr-2" href="">
+              <img src="../../assets/img/lg.svg" width="130" alt="mwc logo">
+            </a>
+            <div>
+              <a href="" class="social-btn mb-1 mt-md-0 mt-sm-1">
+                <i class="mwi-forum"></i>
+              </a>
+              <a href="" class="social-btn mb-1 mt-md-0 mt-sm-1">
+                <i class="mwi-github"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-discord"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-telegram"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-bitcoin"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Utility</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Block Explorer</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Network Statistics</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Network Stats CSV</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Full Node</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Cold Storage - GUI</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Cold Storage - CLI</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Airdrop Info</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Airdrop Balance</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Reading</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Documentation</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Roadmap</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Resources</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Articles</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Whitepaper</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MW Whitepaper</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">With Poelstra's Updates</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">BIP- Sig / Private Keys</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Wallets</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC GUI Wallet</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC 713 Wallet</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Wallet for Full Node</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Mining</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Mining Info</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Coin Calculators C31</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">minerstat</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Mining Pool Stat C31</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">What To Mine</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Mining</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Dashboard</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">What To Mine</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- js libraries and plugins-->
+    <!--<script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../../assets/js/style.min.js"></script>-->
+  </body>
+</html>

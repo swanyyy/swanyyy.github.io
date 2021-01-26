@@ -1,0 +1,42 @@
+//
+// Dividers
+// --------------------------------------------------
+
+
+// Horizontal rule
+
+hr {
+  position: relative;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid $divider-color;
+  z-index: 0;
+  &.hr-light { border-color: $divider-light-color; }
+
+  &.hr-gradient {
+    height: 1px;
+    border: initial;
+    opacity: .9;
+    background: $divider-gradient;
+    &.hr-light { opacity: .4; }
+  }
+}
+
+
+// Vertical divider
+// (for flex container only)
+
+.divider-vertical {
+  display: block;
+  position: relative;
+  width: 0;
+  background: black;
+  &::before {
+    display: block;
+    width: $divider-vertical-width;
+    height: 100%;
+    background: $divider-vertical-gradient;
+    content: '';
+  }
+  &.divider-light::before { opacity: $divider-vertical-light-opacity; }
+}

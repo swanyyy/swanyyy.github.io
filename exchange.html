@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MWC - MimbleWimble Coin | Scalable cryptocurrency based on the Mimblewimble Protocol</title>
+
+    <meta name="description" content="Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.">
+    <meta name="keywords" content="Mimblewimble applied in the base layer. Scarce, censorship resistant, durable, indestructible, salable, portable, fungible, private & divisible.‍ Good money.">
+    <meta name="author" content="MWC">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/mwc.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/mwc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/mwc.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/mwc.png">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/css/style.min.css">
+  </head>
+
+  <body>
+    <!--<div class="warning">
+      <div class="container" >
+        Important : MWC is hardforking block xxxx, make sure to update to your wallet to the v1.0.0
+      </div>
+    </div>-->
+    <main class="mw-page-wrapper position-relative">
+
+      <!-- Navbar -->
+      <header>
+        <div class="navb">
+          <div class="container text-light ">
+            <div> 
+              <a href="/" class="logo mt-n1">
+                <img src="../../assets/img/lg.svg" alt="MWC logo">
+              </a>
+              <input class="menu-btn" type="checkbox" id="menu-btn"/>
+              <label class="menu-icon mt-2" for="menu-btn"><span class="navicon"></span></label>
+              <div class="dropdown-wrapper">
+                <input id="dropdown-t" type="radio">
+                <div class="dd text-uppercase font-size-sm">
+                  <input type="radio" id="option-1" name="options">
+                  <label for="option-1">
+                      <a href="/ru">
+                        <img src="../../assets/img/flags/ru.svg" class="mr-2" width="20" alt="Русский"/>
+                        Русский
+                      </a>
+                  </label>
+                  <input type="radio" id="option-2" name="options">
+                  <label for="option-2">
+                    <a href="/cn" >
+                      <img src="../../assets/img/flags/cn.svg" class="mr-2" width="20" alt="Italiano"/>
+                      简体中文
+                    </a>
+                  </label>
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/nl.svg" class="mr-2" width="20" alt="Nederlands"/>
+                      Türkçe
+                    </a>
+                  </label>
+                  <input type="radio" id="option-3" name="options">
+                  <label for="option-3">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/it.svg" class="mr-2" width="20" alt="Italiano"/>
+                      Italiano
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/nl.svg" class="mr-2" width="20" alt="Nederlands"/>
+                      Nederlands
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/pt.svg" class="mr-2" width="20" alt="Português"/>
+                      Português
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/es.svg" class="mr-2" width="20" alt="Français"/>
+                      Español
+                    </a>
+                  </label>
+                  <input type="radio" id="option-4" name="options">
+                  <label for="option-4">
+                    <a href="/wallet">
+                      <img src="../../assets/img/flags/de.svg" class="mr-2" width="20" alt="Deutsch"/>
+                      Deutsch
+                    </a>
+                  </label>
+                </div>
+                <label for="dropdown-t" class="text-uppercase dropdown-t-label">
+                  <img class="mt-n1 mr-2" src="../../assets/img/flags/en.svg" width="20" alt="Русский"/>
+                  english
+                </label>
+              </div>
+              <ul class="menu text-light text-center" data-toggle="dropdown-wrapper">
+                <li><a class="text-primary" href="/">Home</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="wallet">Wallets</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="exchange">Exchanges</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="miner">Miners</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="https://explorer.mwc.mw">Explorer</a></li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li>
+                  <a>
+                    Ressources
+                    <i class="mwi-angle-down align-middle mt-n1"></i>
+                  </a>
+                  <ul>
+                    <li><a href="news">News</a></li>
+                    <li><a href="docs">Documentation</a></li>
+                    <li><a href="roadmap">roadmap</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="team">Team</a></li>
+                    <li><a href="community">community</a></li>
+                    <li><a href="https://github.com/mwcproject/docs/blob/master/whitepaper.pdf">Whitepaper</a></li>
+                  </ul>
+                </li>
+                <hr class="d-lg-flex d-lb-none hr-gradient my-1">
+                <li><a class="animate" href="crownfunding.mwc.mw">crownfunding</a></li>
+              </ul>
+            <div>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Hero-->
+      <section class="bg-dark py-lg-5 pt-2 pb-5" style="background-image: url(../../assets/img/home/hero/halftone.jpg)">
+        <div class="container d-flex flex-column justify-content-lg-around justify-content-center">
+          <div class="row ml-md-4 ml-sm-0 py-lg-5 py-0">
+            <div class="col-lg-8 col-md-10 col-sm-10 order-lg-1 order-2 mx-lg-0 mx-sm-auto text-lg-left text-center">
+              <h3 class="display-1 text-uppercase mx-auto pb-lg-1 text-light">
+                exchanges
+              </h3>
+              <h4 class="col-md-12 col-12 mx-md-0 mx-auto text-light pb-4">
+                For hodlers who want to buy, miners who want to sell and everyone in between the exchanges are the liquidity watering hole where all market participants meet. 
+              </h4>
+              <div class="row pt-lg-4">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-10 mx-auto">
+                  <a href="exchange" class="btn btn-gradient btn-border-dark btn-pill text-uppercase mx-2 mb-3"> 
+                    centralized
+                  </a>
+                  <a href="mine" class="btn btn-gradient btn-border-dark btn-pill  mb-3">
+                    decentralized
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-10 col-sm-10 col-9 order-lg-2 order-1 mx-auto mb-lg-0 mb-sm-5 mb-4">
+              <div class="mx-auto text-center">
+                <img src="/assets/img/exchange/ex.png" width="350">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Parallax bg -->
+        <!--<div class="jarallax-img" style="background-image: url(../../assets/img/home/hero/halftone.jpg);"></div>-->
+      </section>
+            
+        </div>
+        <div class="jarallax-img" style="background-image: url(../../assets/img/home/hero/halftone.jpg);"></div>
+      </section>
+      <div class="diagonal ">
+        <div class="clip-path bg-ex pt-n1">
+          <div class=" content">
+            <div class="text-left">
+              <h2 class="h1 text-light font-size-lg text-uppercase mb-sm-n2 mb-1">recommendations</h2>
+              <h5 class="h4 text-light text-uppercase">the best practices</h5>
+              <h5>
+                <ul class="list-unstyled text-light">
+                  <li class="d-flex mb-2">
+                    <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                    <b>The MWC Team does not endorse any particular exchange and strongly recommends withdrawing any MWC to your personal wallet.
+                    </b>            
+                  </li>
+                  <li class="d-flex mb-2">
+                    <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                    <div>
+                       For real-time metrics visit:
+                      <a href="https://mwcprice.com" class="no-style">
+                        &nbsp;MWC Dashboard
+                      </a>
+                    </div>        
+                  </li>
+                  <li class="d-flex mb-2">
+                    <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                    <div>
+                      Updated statistics on the MWC trading activity will be kept on many data aggregator sites like
+                      <a href="https://coinmarketcap.com/currencies/mimblewimblecoin/markets" class="no-style">
+                        &nbsp;CoinMarketCap
+                      </a>,
+                      <a href="https://www.coingecko.com/en/coins/mimblewimblecoin#markets" class="no-style">
+                        &nbsp;CoinGecko
+                      </a>,
+                      <a href="https://nomics.com/assets/mwc-mimblewimblecoin/markets" class="no-style">
+                        &nbsp;Nomics 
+                      </a>&nbsp;etc.
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                    <div>
+                      Exchanges provide an important role for MWC because that is where liquidity can be sought and price discovery can happen.
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                    <div>
+                      Therefore, the MWC Team wants MWC to be listed on as many exchanges as possible. The more choices the better. 
+                        <a href="#listing" class="no-style">
+                          &nbsp;At the bottom of the page
+                        </a>
+                      
+                      , please ask your favorite exchange to support the trading of MWC.
+                      </div> 
+                  </li>
+                </ul>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--<section class="py-5 bg-dark">
+        <div class="container ">
+          <h2 class="h1  text-light font-size-lg text-uppercase mb-sm-n2 mb-1">recommendations</h2>
+          <h5 class="h4  text-light text-uppercase">the best practices</h5>
+          <h5 class="text-light">
+
+            <ul class="list-unstyled">
+              <li class="d-flex mb-2">
+                <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                <b>The MWC Team does not endorse any particular exchange and strongly recommends withdrawing any MWC to your personal wallet.
+                </b>            
+              </li>
+              <li class="d-flex mb-2">
+                <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                <div>
+                   For real-time metrics visit:
+                  <a href="https://mwcprice.com" class="no-style">
+                    &nbsp;MWC Dashboard
+                  </a>
+                </div>        
+              </li>
+              <li class="d-flex mb-2">
+                <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                <div>
+                  Updated statistics on the MWC trading activity will be kept on many data aggregator sites like
+                  <a href="https://coinmarketcap.com/currencies/mimblewimblecoin/markets" class="no-style">
+                    &nbsp;CoinMarketCap
+                  </a>,
+                  <a href="https://www.coingecko.com/en/coins/mimblewimblecoin#markets" class="no-style">
+                    &nbsp;CoinGecko
+                  </a>,
+                  <a href="https://nomics.com/assets/mwc-mimblewimblecoin/markets" class="no-style">
+                    &nbsp;Nomics 
+                  </a>&nbsp;etc.
+                </div>
+              </li>
+              <li class="d-flex mb-2">
+                <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                <div>
+                  Exchanges provide an important role for MWC because that is where liquidity can be sought and price discovery can happen.
+                </div>
+              </li>
+              
+              <li class="d-flex mb-2">
+                <i class="mwi-arrow-right mt-1 mr-3 text-primary"></i>
+                <div>
+                  Therefore, the MWC Team wants MWC to be listed on as many exchanges as possible. The more choices the better. 
+                    <a href="#listing" class="no-style">
+                      &nbsp;At the bottom of the page
+                    </a>
+                  
+                  , please ask your favorite exchange to support the trading of MWC.
+                  </div> 
+              </li>
+              
+          </ul>
+          </h5>
+        </div>
+      </section>-->
+      <section id="centralized"class="container py-5">
+        <h2 class="h1 text-center text-uppercase mb-sm-n2 mb-1">Centralized</h2>
+        <h5 class="h4 text-center text-uppercase">exchanges</h5>
+        <h5 class="text-center pb-5">
+          The mission of the MWC developer team is to match and exceed every other good in the market with regard to the ten primary monetary 
+          characteristics in order to produce a good that is the superior qualitative money. Good money in the Information Age is  
+          recognizable, scarce, censorship resistant, durable, indestructible, extensible, salable, portable, fungible, 
+          private and divisible.
+        </h5>
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-1" src="../../assets/img/exchange/bitforex.png" alt="Bitforex" width="280">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-eth font-size-mb"></i>
+                    ETH
+                  </a>
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-usd font-size-mb"></i>
+                    USDT
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container no-style">
+                  <img class="my-0" src="../../assets/img/exchange/hotbit.png" alt="Bitforex" width="240">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-eth font-size-mb"></i>
+                    ETH
+                  </a>
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-usd font-size-mb"></i>
+                    USDT
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-1" src="../../assets/img/exchange/whitebit.png" alt="Bitforex" width="250">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/exchange/bithumb.svg" alt="Bitforex" width="180">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/hitbtc.png" alt="Bitforex" width="240">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/biki.png" alt="Bitforex" width="180">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-usd font-size-mb"></i>
+                    USDT
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/tradeogre.png" alt="Bitforex" width="260">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/tokok.png" alt="Bitforex" width="210">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-dark font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1 no-style">
+                    <i class="mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="decentralized" class="container py-md-6 py-4">
+        <h2 class="h1 text-center text-uppercase mb-sm-n2 mb-1">Decentralized</h2>
+        <h5 class="h4 text-center text-uppercase">exchanges</h5>
+        <h5 class="text-center pb-5">
+          The mission of the MWC developer team is to match and exceed every other good in the market with regard to the ten primary monetary 
+          characteristics in order to produce a good that is the superior qualitative money. Good money in the Information Age is  
+          recognizable, scarce, censorship resistant, durable, indestructible, extensible, salable, portable, fungible, 
+          private and divisible.
+        </h5>
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-1" src="../../assets/img/exchange/bitforex.png" alt="Bitforex" width="280">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-btc font-size-mb"></i>
+                    BTC 
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-eth font-size-mb"></i>
+                    ETH
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-usd font-size-mb"></i>
+                    USDT
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/hotbit.png" alt="Bitforex" width="240">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-eth font-size-mb"></i>
+                    ETH
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-usd font-size-mb"></i>
+                    USDT
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-1" src="../../assets/img/exchange/whitebit.png" alt="Bitforex" width="250">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/exchange/bithumb.svg" alt="Bitforex" width="180">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/tradeogre.png" alt="Bitforex" width="260">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-0" src="../../assets/img/exchange/tokok.png" alt="Bitforex" width="210">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-sm py-1 px-2 mb-2 mx-1">
+                    <i class="mt-n1 mwi-btc font-size-mb"></i>
+                    BTC
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="listing" class="container py-6">
+        <h2 class="h1 text-center text-uppercase mb-sm-n2 mb-1">Help us get listed</h2>
+        <h5 class="h4 text-center text-uppercase">on your favorite exchange</h5>
+        <h5 class="text-center pb-5">
+          The mission of the MWC developer team is to match and exceed every other good in the market with regard to the ten primary monetary 
+          characteristics in order to produce a good that is the superior qualitative money. Good money in the Information Age is  
+          recognizable, scarce, censorship resistant, durable, indestructible, extensible, salable, portable, fungible, 
+          private and divisible.
+        </h5>
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/listing/binance.png" alt="Bitforex">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-1" src="../../assets/img/listing/bittrex.png" alt="Bitforex" width="260">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-3" src="../../assets/img/listing/bitfinex.png" alt="Bitforex" width="210">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/listing/huobi.png" alt="Bitforex" width="200" >
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/listing/okex.png" alt="Bitforex" width="140">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-2" src="../../assets/img/listing/poloniex.png" alt="Bitforex" width="220">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/listing/bisq.svg" alt="Bitforex" width="170">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="" src="../../assets/img/listing/gateio.png" alt="Bitforex" width="190">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-2" src="../../assets/img/listing/bitstamp.png" alt="Bitforex" width="190">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-2" src="../../assets/img/listing/kraken.png" alt="Bitforex" width="280">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-2" src="../../assets/img/listing/ftx.png" alt="Bitforex" width="150">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-11 d-flex flex-column mb-3 order-md-1 order-2">
+            <div class="card card-hover h-100 mb-sm-4 mb-md-3 mb-grid-gutter text-center">
+              <div class="card-body px-lg-5 px-1">
+                <div class="container">
+                  <img class="my-2" src="../../assets/img/listing/bithumb.png" alt="Bitforex" width="190">
+                  <hr class="hr-gradient mx-n4 my-4">
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-twitter font-size-mb"></i>
+                    Tweet
+                  </a>
+                  <a href="" class="btn btn-gradient btn-border-dark btn-pill font-weight-bold font-size-xs py-1 px-2 mb-2 mx-2">
+                    <i class="mwi-mention font-size-mb"></i>
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-12 order-lg-1 order-1 mb-lg-0 mb-4">
+            <a class="d-inline-block mb-4 mr-2" href="">
+              <img src="../../assets/img/lg.svg" width="130" alt="mwc logo">
+            </a>
+            <div>
+              <a href="" class="social-btn mb-1 mt-md-0 mt-sm-1">
+                <i class="mwi-forum"></i>
+              </a>
+              <a href="" class="social-btn mb-1 mt-md-0 mt-sm-1">
+                <i class="mwi-github"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-discord"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-telegram"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-bitcoin"></i>
+              </a>
+              <a href="" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+                <i class="mwi-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Utility</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Block Explorer</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Network Statistics</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Network Stats CSV</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Full Node</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Cold Storage - GUI</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Cold Storage - CLI</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Airdrop Info</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Airdrop Balance</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Reading</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Documentation</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Roadmap</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Resources</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Articles</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Whitepaper</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MW Whitepaper</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">With Poelstra's Updates</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">BIP- Sig / Private Keys</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Wallets</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC GUI Wallet</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC 713 Wallet</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Wallet for Full Node</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Mining</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Mining Info</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Coin Calculators C31</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">minerstat</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Mining Pool Stat C31</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">What To Mine</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Mining</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">MWC Dashboard</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">What To Mine</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../../assets/js/style.min.js"></script>
+  </body>
+</html>

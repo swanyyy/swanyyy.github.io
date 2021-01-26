@@ -1,0 +1,113 @@
+.circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: linear-gradient(90deg, #3700c9 15%,  #9c00e7 100%);
+  border-radius: 100%;
+  overflow: hidden;
+}
+/*.moon {
+  background: #ffa62b;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: 18%;
+  left: 40%;
+  border-radius: 100%;
+}
+.moon2 {
+  background: #ffe05d;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 19%;
+  left: 44%;
+  border-radius: 100%;
+}*//*
+.crater1 {
+  position: absolute;
+  background: url('//blog.codepen.io/wp-content/uploads/2012/06/Button-White-Large.png') no-repeat 50% / 70% rgba(#000, .1);
+  width: 40px;
+  height: 40px;
+  top: 23%;
+  left: 61%;
+}*//*
+.crater2 {
+  position: absolute;
+  background: #ffa62b;
+  width: 20px;
+  height: 20px;
+  top: 38%;
+  left: 56%;
+  border-radius: 100%;
+}
+.crater3 {
+  position: absolute;
+  background: #ffa62b;
+  width: 10px;
+  height: 10px;
+  top: 36%;
+  left: 70%;
+  border-radius: 100%;
+}*/
+.block1{
+  position: absolute;
+  background: white;
+  width: 40px;
+  height: 40px;
+  top: 35.5%;
+  left: 54.1%;
+  clip-path: rectangle(40, 40, 40, 40, 40, 40);
+  transform: rotate(135deg);
+  border-radius: 8px;
+  transition: transform 300ms;
+  &:hover{
+    transition: transform 500ms;
+    transform: rotate(-480deg);
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+.block2 {
+  position: absolute;
+  background: white;
+  width: 40px;
+  height: 40px;
+  top: 35.5%;
+  left: 17.9%;
+  clip-path: rectangle(40, 40, 40, 40, 40, 40);
+  transform: rotate(135deg);
+  border-radius: 8px;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out, transform 500ms;
+  -moz-transition: opacity 2s ease-out;
+  -webkit-transition: opacity 2s ease-out;
+  -o-transition: opacity 2s ease-out;
+  &:hover{
+    width: 40px;
+    height: 40px;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out, transform 5000ms;
+    background: url('//chart.googleapis.com/chart?cht=qr&chl=hello%20my%20friends&chs=180x180&choe=UTF-8&chld=L|2') no-repeat 50% / 70% rgba(rgb(255, 255, 255), .1);
+    transform: scale(2), rotate(-480deg); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+
+
+.list_wrappers{
+    position: relative;
+}
+
+.items_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 30px
+}

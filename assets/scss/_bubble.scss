@@ -1,0 +1,243 @@
+@-webkit-keyframes ripple {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+      transform: rotate(360deg)
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+      transform: /*scale3d(1.4, 1.4, 1)*/
+      rotate(360deg)
+  }
+}
+
+@-webkit-keyframes ripple1 {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+      transform: rotate(720deg)
+  }
+}
+
+@keyframes ripple1 {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+      transform: /*scale3d(1.4, 1.4, 1)*/
+      rotate(720deg)
+  }
+}
+
+@-webkit-keyframes ripple2 {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+      transform: rotate(-360deg)
+  }
+}
+
+@keyframes ripple2 {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+      transform: /*scale3d(1.4, 1.4, 1)*/
+      rotate(-360deg)
+  }
+}
+
+
+
+.bubble {
+    height: 5rem;
+    line-height: 5rem;
+    width: 5rem;
+    border-radius: 1rem;
+    background: transparent;
+    box-shadow: 0 0.15rem 0.6rem 0 rgba(47, 0, 100, 0.07);
+    text-align: center;
+}
+
+.bubble .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.bubble img {
+    display: inline;
+}
+
+.bubble-hover,a.pop:hover .bubble {
+    background: transparent;
+    box-shadow: 0 0.625rem 1.5rem 0 rgba(4,125,220,0.07);
+}
+
+.bubble-hover .inner,a.pop:hover .bubble .inner {
+    background: transparent;
+    /*background-image: radial-gradient(circle, #fff, #f5f4fc, rgb(199, 167, 255));*/
+    transform: rotate(0deg);
+}
+
+.bubble-hover .inner::before,a.pop .bubble .inner::before {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3700c9;
+    border-radius: 35%;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+    -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.50,.50,.50,.50);
+    animation-timing-function: cubic-bezier(.50,.50,.50,.50);
+    z-index: -1;
+}
+
+.bubble-hover .inner::after, a.pop .bubble .inner::after {
+  opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #9b00e7;
+    border-radius: 35%;
+    -webkit-animation-name: ripple1;
+    animation-name: ripple1;
+    -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.50,.50,.50,.50);
+    animation-timing-function: cubic-bezier(.50,.50,.50,.50);
+    z-index: -1;
+}
+
+.bubble-hover::before, a.pop .bubble::before {
+  opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(220, 45, 255);
+    border-radius: 35%;
+    -webkit-animation-name: ripple2;
+    animation-name: ripple2;
+    -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.50,.50,.50,.50);
+    animation-timing-function: cubic-bezier(.50,.50,.50,.50);
+    z-index: -1;
+}
+
+
+.pop {
+    display: block;
+    position: relative;
+    background: transparent;
+    padding: 8.3rem 1rem 0rem;
+    text-align: center;
+    height: 100%;
+    color: white
+}
+
+.pop .bubble {
+    position: absolute;
+    left: 50%;
+    margin-left: -2.5rem;
+    top: 1.5rem;
+    z-index: 9
+}
+
+.pop .ante {
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: transparent;
+    text-transform: uppercase;
+    margin-bottom: -1rem;
+    display: block
+}
+
+.pop h3 {
+    text-decoration: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    color: white;
+}
+
+.pop em {
+    display: block;
+    height: 2px;
+    width: 3rem;
+    background: transparent;
+    margin: 0 auto 1rem auto
+}
+
+.pop p {
+    margin: 0 0 1.3rem 0;
+    list-style: none;
+    color: white;
+}
+
+.pop .btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem
+}
+
+a.pop {
+    /*cursor: pointer;*/
+    text-decoration: none;
+}
+
+a.pop .disabled {
+    display: none
+}
+
+a.pop.investors:hover .disabled,a.pop.makers:hover .disabled {
+    display: inline-block
+}

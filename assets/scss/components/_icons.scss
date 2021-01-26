@@ -1,0 +1,244 @@
+@font-face {
+  font-family: $icon-font-family;
+  src: $path-to-icons;
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='mwi-'], [class*=' mwi-'] {
+  display: inline-block;
+  font: {
+    family: $icon-font-family !important;
+    style: normal;
+    weight: normal;
+    variant: normal;
+  }
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mwi-arrow-bottom-left:before {
+  content: "\e900";
+}
+.mwi-arrow-bottom-right:before {
+  content: "\e901";
+}
+.mwi-arrow-down:before {
+  content: "\e902";
+}
+.mwi-arrow-left:before {
+  content: "\e903";
+}
+.mwi-arrow-right:before {
+  content: "\e904";
+}
+.mwi-arrow-top-left:before {
+  content: "\e905";
+}
+.mwi-arrow-top-right:before {
+  content: "\e906";
+}
+.mwi-arrow-up:before {
+  content: "\e907";
+}
+.mwi-arrow-back:before {
+  content: "\e908";
+}
+.mwi-arrow-convert:before {
+  content: "\e909";
+}
+.mwi-arrow-expand:before {
+  content: "\e90a";
+}
+.mwi-arrow-fluid-horizontal:before {
+  content: "\e90b";
+}
+.mwi-arrow-fluid-vertical:before {
+  content: "\e90c";
+}
+.mwi-arrow-forward:before {
+  content: "\e90d";
+}
+.mwi-arrow-horizontal:before {
+  content: "\e90e";
+}
+.mwi-arrow-reload:before {
+  content: "\e90f";
+}
+.mwi-arrow-select:before {
+  content: "\e910";
+}
+.mwi-arrow-share:before {
+  content: "\e911";
+}
+.mwi-arrow-vertical:before {
+  content: "\e912";
+}
+.mwi-cross:before {
+  content: "\e913";
+}
+.mwi-minus:before {
+  content: "\e914";
+}
+.mwi-plus:before {
+  content: "\e915";
+}
+.mwi-angle-down:before {
+  content: "\e916";
+}
+.mwi-angle-left:before {
+  content: "\e917";
+}
+.mwi-angle-right:before {
+  content: "\e918";
+}
+.mwi-angle-up:before {
+  content: "\e919";
+}
+.mwi-iphone:before {
+  content: "\e920";
+}
+.mwi-mention:before {
+  content: "\e921";
+}
+.mwi-quote:before {
+  content: "\e922";
+}
+.mwi-attach:before {
+  content: "\e923";
+}
+.mwi-files:before {
+  content: "\e924";
+}
+.mwi-play:before {
+  content: "\e925";
+}
+.mwi-share:before {
+  content: "\e926";
+}
+.mwi-upload:before {
+  content: "\e927";
+}
+.mwi-map-pin-outline:before {
+  content: "\e928";
+}
+.mwi-map-pin-solid:before {
+  content: "\e929";
+}
+.mwi-volume-off:before {
+  content: "\e930";
+}
+.mwi-volume-off-outline:before {
+  content: "\e931";
+}
+.mwi-volume-on:before {
+  content: "\e932";
+}
+.mwi-volume-on-outline:before {
+  content: "\e933";
+}
+.mwi-twitter:before {
+  content: "\e934";
+}
+.mwi-youtube:before {
+  content: "\e935";
+}
+.mwi-github:before {
+  content: "\e936";
+}
+.mwi-discord:before {
+  content: "\e937";
+}
+.mwi-telegram:before {
+  content: "\e938";
+}
+.mwi-telegram:before {
+  content: "\e938";
+}
+.mwi-laptop:before {
+  content: "\e939";
+}
+.mwi-wallet:before {
+  content: "\e940";
+}
+.mwi-mining:before {
+  content: "\e941";
+}
+.mwi-exchange:before {
+  content: "\e942";
+}
+.mwi-bitcoin:before {
+  content: "\e943";
+}
+.mwi-windows:before {
+  content: "\e944";
+}
+.mwi-macos:before {
+  content: "\e945";
+}
+.mwi-linux:before {
+  content: "\e946";
+}
+.mwi-forum:before {
+  content: "\e947";
+}
+.mwi-apple:before {
+  content: "\e948";
+}
+.mwi-android:before {
+  content: "\e949";
+}
+.mwi-command:before {
+  content: "\e950";
+}
+.mwi-danger:before {
+  content: "\e952";
+}
+.mwi-alert:before {
+  content: "\e953";
+}
+.mwi-download:before {
+  content: "\e954";
+}
+.mwi-clock:before {
+  content: "\e955";
+}
+.mwi-alert-octagon:before {
+  content: "\e956";
+}
+.mwi-source:before {
+  content: "\e957";
+}
+.mwi-question:before {
+  content: "\e958";
+}
+.mwi-reddit:before {
+  content: "\e959";
+}
+.mwi-open-source:before {
+  content: "\e960";
+}
+.mwi-terminal:before {
+  content: "\e961";
+}
+.mwi-check:before {
+  content: "\e962";
+}
+.mwi-contact:before {
+  content: "\e963";
+}
+.mwi-eth:before {
+  content: "\e964";
+}
+.mwi-usd:before {
+  content: "\e965";
+}
+.mwi-btc:before {
+  content: "\e966";
+}
